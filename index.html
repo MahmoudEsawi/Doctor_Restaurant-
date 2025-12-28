@@ -1,0 +1,780 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مطعم الدكتور - Doctor Restaurant</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&family=El+Messiri:wght@400;500;600;700&family=Tajawal:wght@300;400;500;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <div class="logo-container">
+                    <img src="images/logo.png" alt="مطعم الدكتور" class="logo-img" onerror="this.src='images/logo.svg';">
+                </div>
+                <div class="brand-text">
+                    <h1>مطعم الدكتور</h1>
+                    <p class="subtitle">Doctor Restaurant</p>
+                </div>
+            </div>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#home">الرئيسية</a></li>
+                <li><a href="#menu">القائمة</a></li>
+                <li><a href="#about">من نحن</a></li>
+                <li><a href="#contact">اتصل بنا</a></li>
+            </ul>
+            <button class="menu-toggle" id="menuToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <div class="hero-logo">
+                <img src="images/logo.png" alt="مطعم الدكتور" class="hero-logo-img" onerror="this.src='images/logo.svg';">
+            </div>
+            <h2 class="hero-title">مطعم الدكتور</h2>
+            <p class="hero-subtitle">طعم لا يقاوم | Irresistible Taste</p>
+            <p class="hero-tagline">نكهة تلامس القلب | Taste that touches the heart</p>
+        </div>
+    </section>
+
+    <!-- Menu Section -->
+    <section id="menu" class="menu-section">
+        <div class="container">
+            <h2 class="section-title">قائمة الطعام | Menu</h2>
+
+            <!-- Menu Tabs -->
+            <div class="menu-tabs">
+                <button class="tab-button active" data-tab="pizza">بيتزا | Pizza</button>
+                <button class="tab-button" data-tab="shawarma">شاورما | Shawarma</button>
+                <button class="tab-button" data-tab="fakhara">فخارات | Fakhara</button>
+                <button class="tab-button" data-tab="manakish">مناقيش | Manakish</button>
+                <button class="tab-button" data-tab="kebab">كباب وشيش | Kebab & Shish</button>
+                <button class="tab-button" data-tab="burger">برغر | Burgers</button>
+                <button class="tab-button" data-tab="salads">سلطات ومشروبات | Salads & Drinks</button>
+                <button class="tab-button" data-tab="sauces">صلصات | Sauces</button>
+            </div>
+
+            <!-- Pizza Menu -->
+            <div class="menu-category active" data-category="pizza">
+                <h3 class="category-title">بيتزا الدكتور | Doctor's Pizza</h3>
+                <div class="menu-items">
+                    <div class="menu-item" data-item="margherita">
+                        <div class="item-image">
+                            <img src="https://images.unsplash.com/photo-1574071318508-1cdbab80d002?w=400&h=300&fit=crop" alt="بيتزا مارغريتا" class="item-img" onerror="this.src='https://via.placeholder.com/400x300/2d8659/ffffff?text=Margherita+Pizza'">
+                        </div>
+                        <div class="item-info">
+                            <h4>بيتزا مارغريتا | Margherita Pizza</h4>
+                            <p class="item-description">طازجة ومميزة</p>
+                            <div class="item-details">
+                                <p class="item-contents"><strong>المحتويات | Contents:</strong> عجينة بيتزا، صلصة طماطم، جبنة موتزاريلا، ريحان طازج | Pizza dough, tomato sauce, mozzarella cheese, fresh basil</p>
+                                <p class="item-full-description">بيتزا إيطالية كلاسيكية بطعم لا يقاوم، مصنوعة من أجود المكونات الطازجة</p>
+                            </div>
+                            <div class="size-selector">
+                                <label>اختر الحجم | Choose Size:</label>
+                                <select class="size-select" data-item="margherita">
+                                    <option value="large" data-price="3.5" data-img="https://images.unsplash.com/photo-1574071318508-1cdbab80d002?w=400&h=300&fit=crop">لارج | Large - 3.5 JD</option>
+                                    <option value="xlarge" data-price="5.5" data-img="https://images.unsplash.com/photo-1574071318508-1cdbab80d002?w=400&h=300&fit=crop">اكس لارج | X-Large - 5.5 JD</option>
+                                </select>
+                            </div>
+                            <p class="item-price">3.5 JD</p>
+                        </div>
+                    </div>
+                    <div class="menu-item" data-item="four-cheese">
+                        <div class="item-image">
+                            <img src="https://images.unsplash.com/photo-1628840042765-356cda07504e?w=400&h=300&fit=crop" alt="بيتزا الأجبان الأربعة" class="item-img" onerror="this.src='https://via.placeholder.com/300x200/2d8659/ffffff?text=Four+Cheese+Pizza'">
+                        </div>
+                        <div class="item-info">
+                            <h4>بيتزا الأجبان الأربعة | Four Cheese Pizza</h4>
+                            <p class="item-description">مزيج من أربعة أنواع من الجبن</p>
+                            <div class="item-details">
+                                <p class="item-contents"><strong>المحتويات | Contents:</strong> عجينة بيتزا، موتزاريلا، جبنة شيدر، جبنة فيتا، جبنة بارميزان | Pizza dough, mozzarella, cheddar, feta, parmesan cheese</p>
+                                <p class="item-full-description">مزيج فاخر من أربعة أنواع من الجبن المميزة، طعم غني وكريمي</p>
+                            </div>
+                            <div class="size-selector">
+                                <label>اختر الحجم | Choose Size:</label>
+                                <select class="size-select" data-item="four-cheese">
+                                    <option value="regular" data-price="4.5" data-img="https://images.unsplash.com/photo-1628840042765-356cda07504e?w=400&h=300&fit=crop">عادي | Regular - 4.5 JD</option>
+                                    <option value="xlarge" data-price="6.5" data-img="https://images.unsplash.com/photo-1628840042765-356cda07504e?w=400&h=300&fit=crop">اكس لارج | X-Large - 6.5 JD</option>
+                                </select>
+                            </div>
+                            <p class="item-price">4.5 JD</p>
+                        </div>
+                    </div>
+                    <div class="menu-item" data-item="vegetable">
+                        <div class="item-image">
+                            <img src="https://images.unsplash.com/photo-1571997478779-2adcbbe9ab2f?w=400&h=300&fit=crop" alt="بيتزا خضار" class="item-img" onerror="this.src='https://via.placeholder.com/300x200/2d8659/ffffff?text=Vegetable+Pizza'">
+                        </div>
+                        <div class="item-info">
+                            <h4>بيتزا خضار | Vegetable Pizza</h4>
+                            <p class="item-description">خضار طازجة</p>
+                            <div class="item-details">
+                                <p class="item-contents"><strong>المحتويات | Contents:</strong> عجينة بيتزا، فلفل حلو، بصل، فطر، زيتون، جبنة موتزاريلا | Pizza dough, bell peppers, onions, mushrooms, olives, mozzarella cheese</p>
+                                <p class="item-full-description">بيتزا صحية بخضار طازجة ومتنوعة، نكهة خفيفة ومنعشة</p>
+                            </div>
+                            <div class="size-selector">
+                                <label>اختر الحجم | Choose Size:</label>
+                                <select class="size-select" data-item="vegetable">
+                                    <option value="regular" data-price="3.5" data-img="https://images.unsplash.com/photo-1571997478779-2adcbbe9ab2f?w=400&h=300&fit=crop">عادي | Regular - 3.5 JD</option>
+                                    <option value="xlarge" data-price="5.5" data-img="https://images.unsplash.com/photo-1571997478779-2adcbbe9ab2f?w=400&h=300&fit=crop">اكس لارج | X-Large - 5.5 JD</option>
+                                </select>
+                            </div>
+                            <p class="item-price">3.5 JD</p>
+                        </div>
+                    </div>
+                    <div class="menu-item" data-item="ginger">
+                        <div class="item-image">
+                            <img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?w=400&h=300&fit=crop" alt="بيتزا زنجر" class="item-img" onerror="this.src='https://via.placeholder.com/300x200/2d8659/ffffff?text=Ginger+Pizza'">
+                        </div>
+                        <div class="item-info">
+                            <h4>بيتزا زنجر | Ginger Pizza</h4>
+                            <p class="item-description">نكهة مميزة</p>
+                            <div class="item-details">
+                                <p class="item-contents"><strong>المحتويات | Contents:</strong> عجينة بيتزا، دجاج زنجر، جبنة موتزاريلا، صلصة خاصة | Pizza dough, ginger chicken, mozzarella cheese, special sauce</p>
+                                <p class="item-full-description">بيتزا بنكهة زنجر مميزة مع دجاج طازج، طعم حار ولذيذ</p>
+                            </div>
+                            <div class="size-selector">
+                                <label>اختر الحجم | Choose Size:</label>
+                                <select class="size-select" data-item="ginger">
+                                    <option value="regular" data-price="4.5" data-img="https://images.unsplash.com/photo-1513104890138-7c749659a591?w=400&h=300&fit=crop">عادي | Regular - 4.5 JD</option>
+                                    <option value="xlarge" data-price="6.5" data-img="https://images.unsplash.com/photo-1513104890138-7c749659a591?w=400&h=300&fit=crop">اكس لارج | X-Large - 6.5 JD</option>
+                                </select>
+                            </div>
+                            <p class="item-price">4.5 JD</p>
+                        </div>
+                    </div>
+                    <div class="menu-item" data-item="alfredo">
+                        <div class="item-image">
+                            <img src="https://images.unsplash.com/photo-1628840042765-356cda07504e?w=400&h=300&fit=crop" alt="دجاج الفريدو" class="item-img" onerror="this.src='https://via.placeholder.com/300x200/2d8659/ffffff?text=Alfredo+Chicken'">
+                        </div>
+                        <div class="item-info">
+                            <h4>دجاج الفريدو | Alfredo Chicken</h4>
+                            <p class="item-description">دجاج مع صلصة الفريدو</p>
+                            <div class="item-details">
+                                <p class="item-contents"><strong>المحتويات | Contents:</strong> عجينة بيتزا، دجاج مشوي، صلصة ألفريدو، جبنة موتزاريلا | Pizza dough, grilled chicken, alfredo sauce, mozzarella cheese</p>
+                                <p class="item-full-description">بيتزا كريمية مع دجاج مشوي وصلصة ألفريدو الإيطالية، طعم غني ومميز</p>
+                            </div>
+                            <div class="size-selector">
+                                <label>اختر الحجم | Choose Size:</label>
+                                <select class="size-select" data-item="alfredo">
+                                    <option value="regular" data-price="4.5" data-img="https://images.unsplash.com/photo-1628840042765-356cda07504e?w=400&h=300&fit=crop">عادي | Regular - 4.5 JD</option>
+                                    <option value="xlarge" data-price="6.5" data-img="https://images.unsplash.com/photo-1628840042765-356cda07504e?w=400&h=300&fit=crop">اكس لارج | X-Large - 6.5 JD</option>
+                                </select>
+                            </div>
+                            <p class="item-price">4.5 JD</p>
+                        </div>
+                    </div>
+                    <div class="menu-item" data-item="salami">
+                        <div class="item-image">
+                            <img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?w=400&h=300&fit=crop" alt="بيتزا سلامي" class="item-img" onerror="this.src='https://via.placeholder.com/300x200/2d8659/ffffff?text=Salami+Pizza'">
+                        </div>
+                        <div class="item-info">
+                            <h4>بيتزا سلامي | Salami Pizza</h4>
+                            <p class="item-description">سلامي طازج</p>
+                            <div class="item-details">
+                                <p class="item-contents"><strong>المحتويات | Contents:</strong> عجينة بيتزا، سلامي إيطالي، جبنة موتزاريلا، زيتون | Pizza dough, Italian salami, mozzarella cheese, olives</p>
+                                <p class="item-full-description">بيتزا إيطالية أصيلة مع سلامي طازج، نكهة قوية ومميزة</p>
+                            </div>
+                            <div class="size-selector">
+                                <label>اختر الحجم | Choose Size:</label>
+                                <select class="size-select" data-item="salami">
+                                    <option value="regular" data-price="4.5" data-img="https://images.unsplash.com/photo-1513104890138-7c749659a591?w=400&h=300&fit=crop">عادي | Regular - 4.5 JD</option>
+                                    <option value="xlarge" data-price="6.5" data-img="https://images.unsplash.com/photo-1513104890138-7c749659a591?w=400&h=300&fit=crop">اكس لارج | X-Large - 6.5 JD</option>
+                                </select>
+                            </div>
+                            <p class="item-price">4.5 JD</p>
+                        </div>
+                    </div>
+                    <div class="menu-item" data-item="barbecue">
+                        <div class="item-image">
+                            <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=400&h=300&fit=crop" alt="باربيكيو" class="item-img" onerror="this.src='https://via.placeholder.com/300x200/2d8659/ffffff?text=Barbecue+Pizza'">
+                        </div>
+                        <div class="item-info">
+                            <h4>باربيكيو | Barbecue</h4>
+                            <p class="item-description">نكهة باربيكيو مميزة</p>
+                            <div class="item-details">
+                                <p class="item-contents"><strong>المحتويات | Contents:</strong> عجينة بيتزا، لحم مشوي، صلصة باربيكيو، جبنة موتزاريلا، بصل | Pizza dough, grilled meat, barbecue sauce, mozzarella cheese, onions</p>
+                                <p class="item-full-description">بيتزا بنكهة باربيكيو مميزة مع لحم مشوي، طعم مدخن ولذيذ</p>
+                            </div>
+                            <div class="size-selector">
+                                <label>اختر الحجم | Choose Size:</label>
+                                <select class="size-select" data-item="barbecue">
+                                    <option value="regular" data-price="4.5" data-img="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=400&h=300&fit=crop">عادي | Regular - 4.5 JD</option>
+                                    <option value="xlarge" data-price="6.5" data-img="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=400&h=300&fit=crop">اكس لارج | X-Large - 6.5 JD</option>
+                                </select>
+                            </div>
+                            <p class="item-price">4.5 JD</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Shawarma Section -->
+            <div class="menu-category" data-category="shawarma">
+                <h3 class="category-title">شاورما على الصاج وكرسبي تشيكن | Shawarma on Saj and Crispy Chicken</h3>
+                <div class="menu-items">
+                    <div class="menu-item" data-item="saj-sandwich">
+                        <div class="item-image">
+                            <img src="https://images.unsplash.com/photo-1528735602780-2552fd46c7af?w=400&h=300&fit=crop" alt="ساندويش ع الصاج" class="item-img" onerror="this.src='https://via.placeholder.com/300x200/2d8659/ffffff?text=Saj+Sandwich'">
+                        </div>
+                        <div class="item-info">
+                            <h4>ساندويش ع الصاج | Saj Sandwich</h4>
+                            <p class="item-description">شاورما دجاج</p>
+                            <div class="item-details">
+                                <p class="item-contents"><strong>المحتويات | Contents:</strong> خبز صاج، شاورما دجاج، خضار طازجة، صلصة ثوم | Saj bread, chicken shawarma, fresh vegetables, garlic sauce</p>
+                                <p class="item-full-description">ساندويش شاورما دجاج طازج على خبز الصاج الساخن، مع خضار طازجة وصلصة مميزة</p>
+                            </div>
+                            <div class="size-selector">
+                                <label>اختر الحجم | Choose Size:</label>
+                                <select class="size-select" data-item="saj-sandwich">
+                                    <option value="small" data-price="0.75" data-img="https://images.unsplash.com/photo-1528735602780-2552fd46c7af?w=400&h=300&fit=crop">صغير | Small - 0.75 JD</option>
+                                    <option value="medium" data-price="1.25" data-img="https://images.unsplash.com/photo-1528735602780-2552fd46c7af?w=400&h=300&fit=crop">متوسط | Medium - 1.25 JD</option>
+                                </select>
+                            </div>
+                            <p class="item-price">0.75 JD</p>
+                        </div>
+                    </div>
+                    <div class="menu-item" data-item="arabic-chicken">
+                        <div class="item-image">
+                            <img src="https://images.unsplash.com/photo-1528735602780-2552fd46c7af?w=400&h=300&fit=crop" alt="وجبة عربي" class="item-img" onerror="this.src='https://via.placeholder.com/300x200/2d8659/ffffff?text=Arabic+Meal'">
+                        </div>
+                        <div class="item-info">
+                            <h4>وجبة عربي | Arabic Meal</h4>
+                            <p class="item-description">شاورما دجاج</p>
+                            <div class="item-details">
+                                <p class="item-contents"><strong>المحتويات | Contents:</strong> خبز صاج، شاورما دجاج، خضار طازجة، صلصة ثوم، بطاطا | Saj bread, chicken shawarma, fresh vegetables, garlic sauce, fries</p>
+                                <p class="item-full-description">وجبة شاورما دجاج كاملة على خبز الصاج الساخن، مع خضار طازجة وصلصة مميزة وبطاطا</p>
+                            </div>
+                            <div class="size-selector">
+                                <label>اختر الحجم | Choose Size:</label>
+                                <select class="size-select" data-item="arabic-chicken">
+                                    <option value="small" data-price="2.00" data-img="https://images.unsplash.com/photo-1528735602780-2552fd46c7af?w=400&h=300&fit=crop">صغير | Small - 2.00 JD</option>
+                                    <option value="medium" data-price="2.50" data-img="https://images.unsplash.com/photo-1528735602780-2552fd46c7af?w=400&h=300&fit=crop">متوسط | Medium - 2.50 JD</option>
+                                    <option value="large" data-price="3.00" data-img="https://images.unsplash.com/photo-1528735602780-2552fd46c7af?w=400&h=300&fit=crop">كبير | Large - 3.00 JD</option>
+                                </select>
+                            </div>
+                            <p class="item-price">2.00 JD</p>
+                        </div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-image">
+                            <img src="https://images.unsplash.com/photo-1528735602780-2552fd46c7af?w=400&h=300&fit=crop" alt="ساندويش الدكتور المميزة" onerror="this.src='https://via.placeholder.com/300x200/2d8659/ffffff?text=Special+Sandwich'">
+                        </div>
+                        <div class="item-info">
+                            <h4>ساندويش الدكتور المميزة | Al-Duktur Special Sandwich</h4>
+                            <p class="item-description">لحمة على الصاج</p>
+                            <p class="item-price">1.50 JD</p>
+                        </div>
+                    </div>
+                    <div class="menu-item" data-item="arabic-meat">
+                        <div class="item-image">
+                            <img src="https://images.unsplash.com/photo-1528735602780-2552fd46c7af?w=400&h=300&fit=crop" alt="وجبة عربي لحمة" class="item-img" onerror="this.src='https://via.placeholder.com/300x200/2d8659/ffffff?text=Arabic+Meal+Meat'">
+                        </div>
+                        <div class="item-info">
+                            <h4>وجبة عربي (لحمة) | Arabic Meal (Meat)</h4>
+                            <p class="item-description">لحمة على الصاج</p>
+                            <div class="item-details">
+                                <p class="item-contents"><strong>المحتويات | Contents:</strong> خبز صاج، لحمة على الصاج، خضار طازجة، صلصة ثوم، بطاطا | Saj bread, meat on saj, fresh vegetables, garlic sauce, fries</p>
+                                <p class="item-full-description">وجبة لحمة على الصاج كاملة مع خضار طازجة وصلصة مميزة وبطاطا</p>
+                            </div>
+                            <div class="size-selector">
+                                <label>اختر الحجم | Choose Size:</label>
+                                <select class="size-select" data-item="arabic-meat">
+                                    <option value="small" data-price="2.50" data-img="https://images.unsplash.com/photo-1528735602780-2552fd46c7af?w=400&h=300&fit=crop">صغير | Small - 2.50 JD</option>
+                                    <option value="medium" data-price="3.00" data-img="https://images.unsplash.com/photo-1528735602780-2552fd46c7af?w=400&h=300&fit=crop">متوسط | Medium - 3.00 JD</option>
+                                    <option value="large" data-price="3.50" data-img="https://images.unsplash.com/photo-1528735602780-2552fd46c7af?w=400&h=300&fit=crop">كبير | Large - 3.50 JD</option>
+                                </select>
+                            </div>
+                            <p class="item-price">2.50 JD</p>
+                        </div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-image">
+                            <img src="https://images.unsplash.com/photo-1626082927389-6cd097cdc6ec?w=400&h=300&fit=crop" alt="وجبة تندر أربع قطع" onerror="this.src='https://via.placeholder.com/300x200/2d8659/ffffff?text=4+Tender+Pieces'">
+                        </div>
+                        <div class="item-info">
+                            <h4>وجبة تندر أربع قطع | 4 Tender Pieces Meal</h4>
+                            <p class="item-description">مغرقة بالصوص وبطاطا</p>
+                            <p class="item-price">2.75 JD</p>
+                        </div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-image">
+                            <img src="https://images.unsplash.com/photo-1626082927389-6cd097cdc6ec?w=400&h=300&fit=crop" alt="وجبة تندر ست قطع" onerror="this.src='https://via.placeholder.com/300x200/2d8659/ffffff?text=6+Tender+Pieces'">
+                        </div>
+                        <div class="item-info">
+                            <h4>وجبة تندر ست قطع | 6 Tender Pieces Meal</h4>
+                            <p class="item-description">بالصوص وبطاطا</p>
+                            <p class="item-price">3.50 JD</p>
+                        </div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-image">
+                            <img src="https://images.unsplash.com/photo-1626082927389-6cd097cdc6ec?w=400&h=300&fit=crop" alt="دجاج مقرمش بونلس" onerror="this.src='https://via.placeholder.com/300x200/2d8659/ffffff?text=12+Crispy+Chicken'">
+                        </div>
+                        <div class="item-info">
+                            <h4>دجاج مقرمش بونلس ١٢ قطعة | 12 Boneless Crispy Chicken</h4>
+                            <p class="item-description">مع بطاطا والصوص</p>
+                            <p class="item-price">3.00 JD</p>
+                        </div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-image">
+                            <img src="https://images.unsplash.com/photo-1626082927389-6cd097cdc6ec?w=400&h=300&fit=crop" alt="أجنحة مقرمشة" onerror="this.src='https://via.placeholder.com/300x200/2d8659/ffffff?text=10+Crispy+Wings'">
+                        </div>
+                        <div class="item-info">
+                            <h4>أجنحة ١٠ قطع مقرمشة | 10 Crispy Wings</h4>
+                            <p class="item-description">بالصوص مع بطاطا</p>
+                            <p class="item-price">2.50 JD</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Fakhara Section -->
+            <div class="menu-category" data-category="fakhara">
+                <h3 class="category-title">فخارات الدكتور | Doctor's Fakhara</h3>
+                <div class="menu-items">
+                    <div class="menu-item">
+                        <div class="item-image">
+                            <img src="https://images.unsplash.com/photo-1546833999-b9f581a1996d?w=400&h=300&fit=crop" alt="فخارة لحمة ستيك فيليه" onerror="this.src='https://via.placeholder.com/400x300/2d8659/ffffff?text=Beef+Steak'">
+                        </div>
+                        <div class="item-info">
+                            <h4>فخارة لحمة ستيك فيليه | Beef Steak Fillet Fakhara</h4>
+                            <p class="item-description">بالصوص الخاص وبطاطا مهروسة</p>
+                            <div class="item-details">
+                                <p class="item-contents"><strong>المحتويات | Contents:</strong> ستيك فيليه، صلصة خاصة، بطاطا مهروسة، خضار مشكلة | Beef fillet steak, special sauce, mashed potatoes, mixed vegetables</p>
+                                <p class="item-full-description">ستيك فيليه طري ومشوي بشكل مثالي، مع صلصة خاصة مميزة وبطاطا مهروسة كريمية</p>
+                            </div>
+                            <p class="item-price">7.00 JD</p>
+                        </div>
+                    </div>
+                    <div class="menu-item" data-item="chicken-mushroom">
+                        <div class="item-image">
+                            <img src="https://images.unsplash.com/photo-1603133872878-684f208fb84b?w=400&h=300&fit=crop" alt="فخارة دجاج بالفطر والكريمة" class="item-img" onerror="this.src='https://via.placeholder.com/300x200/2d8659/ffffff?text=Chicken+Mushroom'">
+                        </div>
+                        <div class="item-info">
+                            <h4>فخارة دجاج بالفطر والكريمة | Chicken with Mushrooms and Cream</h4>
+                            <p class="item-description">طعم لا يقاوم</p>
+                            <div class="item-details">
+                                <p class="item-contents"><strong>المحتويات | Contents:</strong> دجاج، فطر طازج، كريمة، بهارات خاصة | Chicken, fresh mushrooms, cream, special spices</p>
+                                <p class="item-full-description">فخارة دجاج بالفطر والكريمة، طعم كريمي غني ونكهة مميزة</p>
+                            </div>
+                            <div class="size-selector">
+                                <label>اختر الحجم | Choose Size:</label>
+                                <select class="size-select" data-item="chicken-mushroom">
+                                    <option value="small" data-price="3.50" data-img="https://images.unsplash.com/photo-1603133872878-684f208fb84b?w=400&h=300&fit=crop">صغير | Small - 3.50 JD</option>
+                                    <option value="large" data-price="6.50" data-img="https://images.unsplash.com/photo-1603133872878-684f208fb84b?w=400&h=300&fit=crop">كبير | Large - 6.50 JD</option>
+                                </select>
+                            </div>
+                            <p class="item-price">3.50 JD</p>
+                        </div>
+                    </div>
+                    <div class="menu-item" data-item="chicken-freekeh">
+                        <div class="item-image">
+                            <img src="https://images.unsplash.com/photo-1603133872878-684f208fb84b?w=400&h=300&fit=crop" alt="فخارة دجاج بالفريكة والكريمة" class="item-img" onerror="this.src='https://via.placeholder.com/300x200/2d8659/ffffff?text=Chicken+Freekeh'">
+                        </div>
+                        <div class="item-info">
+                            <h4>فخارة دجاج بالفريكة والكريمة | Chicken with Freekeh and Cream</h4>
+                            <p class="item-description">نكهة مميزة</p>
+                            <div class="item-details">
+                                <p class="item-contents"><strong>المحتويات | Contents:</strong> دجاج، فريكة، كريمة، بهارات خاصة | Chicken, freekeh, cream, special spices</p>
+                                <p class="item-full-description">فخارة دجاج بالفريكة والكريمة، مزيج فريد من النكهات</p>
+                            </div>
+                            <div class="size-selector">
+                                <label>اختر الحجم | Choose Size:</label>
+                                <select class="size-select" data-item="chicken-freekeh">
+                                    <option value="small" data-price="3.50" data-img="https://images.unsplash.com/photo-1603133872878-684f208fb84b?w=400&h=300&fit=crop">صغير | Small - 3.50 JD</option>
+                                    <option value="large" data-price="6.50" data-img="https://images.unsplash.com/photo-1603133872878-684f208fb84b?w=400&h=300&fit=crop">كبير | Large - 6.50 JD</option>
+                                </select>
+                            </div>
+                            <p class="item-price">3.50 JD</p>
+                        </div>
+                    </div>
+                    <div class="menu-item" data-item="chicken-garlic">
+                        <div class="item-image">
+                            <img src="https://images.unsplash.com/photo-1603133872878-684f208fb84b?w=400&h=300&fit=crop" alt="فخارة دجاج بالثوم والليمون" class="item-img" onerror="this.src='https://via.placeholder.com/300x200/2d8659/ffffff?text=Chicken+Garlic'">
+                        </div>
+                        <div class="item-info">
+                            <h4>فخارة دجاج مطفي بالثوم والليمون | Chicken with Garlic and Lemon</h4>
+                            <p class="item-description">نكهة ليمون وثوم</p>
+                            <div class="item-details">
+                                <p class="item-contents"><strong>المحتويات | Contents:</strong> دجاج، ثوم، ليمون، بهارات خاصة | Chicken, garlic, lemon, special spices</p>
+                                <p class="item-full-description">فخارة دجاج بالثوم والليمون، نكهة منعشة ومميزة</p>
+                            </div>
+                            <div class="size-selector">
+                                <label>اختر الحجم | Choose Size:</label>
+                                <select class="size-select" data-item="chicken-garlic">
+                                    <option value="small" data-price="3.50" data-img="https://images.unsplash.com/photo-1603133872878-684f208fb84b?w=400&h=300&fit=crop">صغير | Small - 3.50 JD</option>
+                                    <option value="large" data-price="6.50" data-img="https://images.unsplash.com/photo-1603133872878-684f208fb84b?w=400&h=300&fit=crop">كبير | Large - 6.50 JD</option>
+                                </select>
+                            </div>
+                            <p class="item-price">3.50 JD</p>
+                        </div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-info">
+                            <h4>فخارة فوتوتشيني بالدجاج (كبير) | Fettuccine with Chicken (Large)</h4>
+                            <p class="item-description">باستا إيطالية</p>
+                            <p class="item-price">6.50 JD</p>
+                        </div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-info">
+                            <h4>فخارة بينا ارابياتا | Penne Arrabbiata</h4>
+                            <p class="item-description">باستا حارة</p>
+                            <p class="item-price">5.00 JD</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Manakish Section -->
+            <div class="menu-category" data-category="manakish">
+                <h3 class="category-title">مناقيش لبنانية | Lebanese Manakish</h3>
+                <div class="menu-items">
+                    <div class="menu-item">
+                        <div class="item-info">
+                            <h4>زعتر | Za'atar</h4>
+                            <p class="item-description">بأيدي أردنية راقية</p>
+                            <p class="item-price">0.50 JD</p>
+                        </div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-info">
+                            <h4>زعتر وجبنة بيضاء بلدية | Za'atar and Local White Cheese</h4>
+                            <p class="item-description">بأيدي أردنية راقية</p>
+                            <p class="item-price">1.00 JD</p>
+                        </div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-info">
+                            <h4>جبنة بيضاء بلدية | Local White Cheese</h4>
+                            <p class="item-description">بأيدي أردنية راقية</p>
+                            <p class="item-price">1.50 JD</p>
+                        </div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-info">
+                            <h4>مكس أجبان | Mixed Cheeses</h4>
+                            <p class="item-description">بأيدي أردنية راقية</p>
+                            <p class="item-price">1.50 JD</p>
+                        </div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-info">
+                            <h4>محمرة | Muhammara</h4>
+                            <p class="item-description">بأيدي أردنية راقية</p>
+                            <p class="item-price">1.00 JD</p>
+                        </div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-info">
+                            <h4>محمرة وجبنة | Muhammara and Cheese</h4>
+                            <p class="item-description">بأيدي أردنية راقية</p>
+                            <p class="item-price">1.50 JD</p>
+                        </div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-info">
+                            <h4>سبانخ | Spinach</h4>
+                            <p class="item-description">بأيدي أردنية راقية</p>
+                            <p class="item-price">1.00 JD</p>
+                        </div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-info">
+                            <h4>بطاطا | Potatoes</h4>
+                            <p class="item-description">بأيدي أردنية راقية</p>
+                            <p class="item-price">1.00 JD</p>
+                        </div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-info">
+                            <h4>لحم بعجين حجم كبير | Large Meat Pie</h4>
+                            <p class="item-description">بأيدي أردنية راقية</p>
+                            <p class="item-price">1.50 JD</p>
+                        </div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-info">
+                            <h4>لحم بعجين مع جبنة | Meat Pie with Cheese</h4>
+                            <p class="item-description">بأيدي أردنية راقية</p>
+                            <p class="item-price">2.00 JD</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Kebab & Shish Section -->
+            <div class="menu-category" data-category="kebab">
+                <h3 class="category-title">الكباب والشيش | Kebab & Shish</h3>
+                <div class="menu-items">
+                    <div class="menu-item">
+                        <div class="item-info">
+                            <h4>سندويشة كباب بخبزة الدكتور | Kebab Sandwich with Doctor's Bread</h4>
+                            <p class="item-description">الكباب عنا حكاية</p>
+                            <p class="item-price">1.50 JD</p>
+                        </div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-info">
+                            <h4>سندويشة شيش بخبزة الدكتور | Shish Sandwich with Doctor's Bread</h4>
+                            <p class="item-description">الشيش من عالم ثاني</p>
+                            <p class="item-price">1.00 JD</p>
+                        </div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-info">
+                            <h4>وجبة كباب ٣ أسياخ | Kebab Meal 3 Skewers</h4>
+                            <p class="item-description">بندورة وبطاطا</p>
+                            <p class="item-price">4.50 JD</p>
+                        </div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-info">
+                            <h4>وجبة كباب ٧ أسياخ | Kebab Meal 7 Skewers</h4>
+                            <p class="item-description">بندورة وبطاطا</p>
+                            <p class="item-price">8.50 JD</p>
+                        </div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-info">
+                            <h4>وجبة كباب ١٤ سيخ | Kebab Meal 14 Skewers</h4>
+                            <p class="item-description">بندورة وبطاطا</p>
+                            <p class="item-price">16.00 JD</p>
+                        </div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-info">
+                            <h4>وجبة شيش طاووق ٣ أسياخ | Shish Tawook Meal 3 Skewers</h4>
+                            <p class="item-description">الشيش من عالم ثاني</p>
+                            <p class="item-price">3.00 JD</p>
+                        </div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-info">
+                            <h4>وجبة شيش ٧ أسياخ | Shish Meal 7 Skewers</h4>
+                            <p class="item-description">الشيش من عالم ثاني</p>
+                            <p class="item-price">6.00 JD</p>
+                        </div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-info">
+                            <h4>وجبة شيش ١٤ سيخ | Shish Meal 14 Skewers</h4>
+                            <p class="item-description">الشيش من عالم ثاني</p>
+                            <p class="item-price">12.00 JD</p>
+                        </div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-info">
+                            <h4>المكس رهيب !! | Awesome Mix!!</h4>
+                            <p class="item-description">وجبة مكس شيش وكباب ٣ أسياخ (بصل وبطاطا)</p>
+                            <p class="item-price">3.50 JD</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Burger Section -->
+            <div class="menu-category" data-category="burger">
+                <h3 class="category-title">برغر | Burgers</h3>
+                <div class="menu-items">
+                    <div class="menu-item">
+                        <div class="item-info">
+                            <h4>وجبة تشيز برغر | Cheeseburger Meal</h4>
+                            <p class="item-description">برغر مع جبنة</p>
+                            <p class="item-price">3.75 JD</p>
+                        </div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-info">
+                            <h4>وجبة برغر الدكتور | Doctor Burger Meal</h4>
+                            <p class="item-description">البرغر المميز</p>
+                            <p class="item-price">4.25 JD</p>
+                        </div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-info">
+                            <h4>وجبة برغر سويس ماشروم | Swiss Mushroom Burger Meal</h4>
+                            <p class="item-description">مع فطر سويسري</p>
+                            <p class="item-price">4.25 JD</p>
+                        </div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-info">
+                            <h4>وجبة تشيكن برغر (كرسبي) | Crispy Chicken Burger Meal</h4>
+                            <p class="item-description">دجاج مقرمش</p>
+                            <p class="item-price">2.75 JD</p>
+                        </div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-info">
+                            <h4>وجبة تشيكن برغر (مشوي) | Grilled Chicken Burger Meal</h4>
+                            <p class="item-description">دجاج مشوي</p>
+                            <p class="item-price">2.75 JD</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Salads & Drinks Section -->
+            <div class="menu-category" data-category="salads">
+                <h3 class="category-title">سلطات ومشروبات | Salads & Drinks</h3>
+                <div class="menu-items">
+                    <div class="menu-item">
+                        <div class="item-info">
+                            <h4>سلطة سيزر | Caesar Salad</h4>
+                            <p class="item-description">سلطة طازجة</p>
+                            <p class="item-price">2.50 JD</p>
+                        </div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-info">
+                            <h4>سلطة جرجير | Rocket Salad</h4>
+                            <p class="item-description">سلطة طازجة</p>
+                            <p class="item-price">2.50 JD</p>
+                        </div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-info">
+                            <h4>سلطة يونانية | Greek Salad</h4>
+                            <p class="item-description">سلطة طازجة</p>
+                            <p class="item-price">2.50 JD</p>
+                        </div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-info">
+                            <h4>علبة بطاطا | Box of Fries</h4>
+                            <p class="item-description">بطاطا مقلية</p>
+                            <p class="item-price">1.00 JD</p>
+                        </div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-info">
+                            <h4>مياه | Water</h4>
+                            <p class="item-description">مياه معدنية</p>
+                            <p class="item-price">0.25 JD</p>
+                        </div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-info">
+                            <h4>مشروب غازي | Soft Drink</h4>
+                            <p class="item-description">مشروب بارد</p>
+                            <p class="item-price">0.30 JD</p>
+                        </div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-info">
+                            <h4>لبن عيران | Ayran Yogurt Drink</h4>
+                            <p class="item-description">لبن منعش</p>
+                            <p class="item-price">0.50 JD</p>
+                        </div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-info">
+                            <h4>كركديه | Karkadeh/Hibiscus Drink</h4>
+                            <p class="item-description">مشروب ساخن</p>
+                            <p class="item-price">0.50 JD</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sauces Section -->
+            <div class="menu-category" data-category="sauces">
+                <h3 class="category-title">صلصات | Sauces</h3>
+                <div class="menu-items">
+                    <div class="menu-item">
+                        <div class="item-info">
+                            <h4>صلصة باربيكيو | Barbecue Sauce</h4>
+                            <p class="item-price">0.25 JD</p>
+                        </div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-info">
+                            <h4>صلصة ديناميت | Dynamite Sauce</h4>
+                            <p class="item-price">0.25 JD</p>
+                        </div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-info">
+                            <h4>صلصة بافلو | Buffalo Sauce</h4>
+                            <p class="item-price">0.25 JD</p>
+                        </div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-info">
+                            <h4>عسل خردل | Honey Mustard</h4>
+                            <p class="item-price">0.25 JD</p>
+                        </div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-info">
+                            <h4>جبنة ذائبة | Melted Cheese</h4>
+                            <p class="item-price">0.25 JD</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about-section">
+        <div class="container">
+            <h2 class="section-title">من نحن | About Us</h2>
+            <div class="about-content">
+                <p>مطعم الدكتور يقدم لكم أفضل الأطباق العربية والإيطالية بأيدي أردنية راقية. نقدم طعم لا يقاوم ونكهة تلامس القلب.</p>
+                <p>Doctor Restaurant offers you the best Arabic and Italian dishes with refined Jordanian hands. We offer irresistible taste and flavor that touches the heart.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <h2 class="section-title">اتصل بنا | Contact Us</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <p><strong>العنوان | Address:</strong></p>
+                    <p class="address-link">
+                        <a href="https://maps.app.goo.gl/CEmpPJetAeoYxEr66" target="_blank" rel="noopener noreferrer" class="map-link-large">
+                            📍 الطفيلة العيص مقابل سوبر ماركت القيسي | Tafila Al-Ais, Opposite Al-Qaisi Supermarket
+                        </a>
+                    </p>
+                    <p><strong>الهاتف | Phone:</strong> <a href="tel:+962770181213" class="phone-link">0770181213</a></p>
+                    <p><strong>البريد الإلكتروني | Email:</strong> info@doctorrestaurant.com</p>
+                </div>
+                <div class="opening-hours">
+                    <h3>🕐 مواعيد العمل | Opening Hours</h3>
+                    <div class="hours-note">
+                        <p>⏰ المطعم مفتوح يومياً من 8 صباحاً حتى 12 منتصف الليل</p>
+                        <p>⏰ Restaurant is open daily from 8 AM to 12 AM</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 مطعم الدكتور | Doctor Restaurant. جميع الحقوق محفوظة.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+

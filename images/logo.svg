@@ -1,0 +1,49 @@
+<svg width="200" height="250" viewBox="0 0 200 250" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background Circle -->
+  <circle cx="100" cy="100" r="90" fill="#6bb892" opacity="0.15"/>
+  
+  <!-- Chef Hat -->
+  <path d="M 60 50 L 60 30 Q 60 20 70 20 L 130 20 Q 140 20 140 30 L 140 50" 
+        fill="white" stroke="#333" stroke-width="2"/>
+  <rect x="60" y="50" width="80" height="20" fill="white" stroke="#333" stroke-width="2"/>
+  
+  <!-- Stethoscope -->
+  <path d="M 50 15 Q 45 10 50 5 Q 55 0 60 5" 
+        fill="none" stroke="#666" stroke-width="3" stroke-linecap="round"/>
+  <path d="M 150 15 Q 155 10 150 5 Q 145 0 140 5" 
+        fill="none" stroke="#666" stroke-width="3" stroke-linecap="round"/>
+  <circle cx="100" cy="25" r="8" fill="#999" stroke="#666" stroke-width="2"/>
+  
+  <!-- Face -->
+  <circle cx="100" cy="85" r="35" fill="#f4d4a3" stroke="#333" stroke-width="2"/>
+  
+  <!-- Eyes -->
+  <ellipse cx="90" cy="80" rx="4" ry="6" fill="#333"/>
+  <ellipse cx="110" cy="80" rx="4" ry="6" fill="#333"/>
+  
+  <!-- Mustache -->
+  <path d="M 75 95 Q 85 100 100 98 Q 115 100 125 95" 
+        fill="#8b4513" stroke="#654321" stroke-width="1"/>
+  <path d="M 85 100 Q 90 105 100 103 Q 110 105 115 100" 
+        fill="#8b4513" stroke="#654321" stroke-width="1"/>
+  
+  <!-- Bow Tie -->
+  <path d="M 90 110 Q 85 115 90 120 Q 95 115 90 110" 
+        fill="#6bb892" stroke="#4a9d73" stroke-width="1"/>
+  <path d="M 110 110 Q 115 115 110 120 Q 105 115 110 110" 
+        fill="#6bb892" stroke="#4a9d73" stroke-width="1"/>
+  <circle cx="100" cy="115" r="3" fill="#4a9d73"/>
+  
+  <!-- Restaurant Name -->
+  <text x="100" y="160" font-size="32" font-weight="bold" text-anchor="middle" 
+        fill="#6bb892" font-family="Cairo, Arial, sans-serif">الدكتور</text>
+  
+  <!-- Decorative Lines -->
+  <line x1="30" y1="175" x2="70" y2="175" stroke="#6bb892" stroke-width="3" stroke-linecap="round"/>
+  <line x1="130" y1="175" x2="170" y2="175" stroke="#6bb892" stroke-width="3" stroke-linecap="round"/>
+  
+  <!-- Slogan -->
+  <text x="100" y="195" font-size="14" text-anchor="middle" 
+        fill="#6bb892" font-family="Cairo, Arial, sans-serif">نكهة تلامس القلب</text>
+</svg>
+
