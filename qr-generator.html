@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QR Code Generator - مطعم الدكتور</title>
+    <script src="https://cdn.jsdelivr.net/npm/qrcode@1.5.3/build/qrcode.min.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', 'Tajawal', sans-serif;
+            background: linear-gradient(135deg, #2d8659, #1e5d3f);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            direction: rtl;
+        }
+
+        .container {
+            background: white;
+            border-radius: 20px;
+            padding: 3rem;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+            max-width: 500px;
+            width: 100%;
+            text-align: center;
+        }
+
+        h1 {
+            color: #2d8659;
+            margin-bottom: 1rem;
+            font-size: 2rem;
+        }
+
+        .subtitle {
+            color: #666;
+            margin-bottom: 2rem;
+            font-size: 1rem;
+        }
+
+        .input-group {
+            margin-bottom: 2rem;
+        }
+
+        label {
+            display: block;
+            color: #333;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+            text-align: right;
+        }
+
+        input {
+            width: 100%;
+            padding: 1rem;
+            border: 2px solid #2d8659;
+            border-radius: 10px;
+            font-size: 1rem;
+            direction: ltr;
+            text-align: left;
+        }
+
+        input:focus {
+            outline: none;
+            border-color: #6bb892;
+            box-shadow: 0 0 0 3px rgba(45, 134, 89, 0.1);
+        }
+
+        .qr-container {
+            margin: 2rem 0;
+            padding: 1.5rem;
+            background: #f5f5f5;
+            border-radius: 15px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 300px;
+        }
+
+        #qrcode {
+            background: white;
+            padding: 1rem;
+            border-radius: 10px;
+        }
+
+        #qrcode img {
+            display: block;
+            margin: 0 auto;
+        }
+
+        .btn-group {
+            display: flex;
+            gap: 1rem;
+            flex-direction: column;
+        }
+
+        button {
+            padding: 1rem 2rem;
+            background: linear-gradient(135deg, #2d8659, #6bb892);
+            color: white;
+            border: none;
+            border-radius: 10px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+            width: 100%;
+        }
+
+        button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(45, 134, 89, 0.3);
+        }
+
+        button:active {
+            transform: translateY(0);
+        }
+
+        .download-btn {
+            background: linear-gradient(135deg, #4a9d73, #2d8659);
+        }
+
+        .info {
+            margin-top: 1.5rem;
+            padding: 1rem;
+            background: rgba(45, 134, 89, 0.1);
+            border-radius: 10px;
+            color: #1e5d3f;
+            font-size: 0.9rem;
+            line-height: 1.6;
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                padding: 2rem 1.5rem;
+            }
+
+            h1 {
+                font-size: 1.5rem;
+            }
+
+            .qr-container {
+                min-height: 250px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>📱 QR Code Generator</h1>
+        <p class="subtitle">مولد رمز QR للموقع</p>
+        
+        <div class="input-group">
+            <label for="websiteUrl">رابط الموقع | Website URL:</label>
+            <input 
+                type="url" 
+                id="websiteUrl" 
+                placeholder="https://your-website.com"
+                value="https://mahmoudesawi.github.io/Doctor_Restaurant-/"
+            >
+        </div>
+
+        <div class="qr-container">
+            <div id="qrcode"></div>
+        </div>
+
+        <div class="btn-group">
+            <button onclick="generateQR()">إنشاء QR Code | Generate QR Code</button>
+            <button class="download-btn" onclick="downloadQR()">تحميل QR Code | Download QR Code</button>
+        </div>
+
+        <div class="info">
+            <strong>💡 ملاحظة:</strong> أدخل رابط الموقع أعلاه ثم اضغط "إنشاء QR Code". يمكنك استخدام الرابط بعد نشره على GitHub Pages أو أي خدمة استضافة أخرى.
+            <br><br>
+            <strong>💡 Note:</strong> Enter your website URL above and click "Generate QR Code". You can use the link after publishing it on GitHub Pages or any hosting service.
+        </div>
+    </div>
+
+    <script>
+        let currentQRData = '';
+
+        function generateQR() {
+            const url = document.getElementById('websiteUrl').value.trim();
+            
+            if (!url) {
+                alert('الرجاء إدخال رابط الموقع | Please enter a website URL');
+                return;
+            }
+
+            // Validate URL
+            try {
+                new URL(url);
+            } catch (e) {
+                alert('الرجاء إدخال رابط صحيح | Please enter a valid URL');
+                return;
+            }
+
+            currentQRData = url;
+            const qrContainer = document.getElementById('qrcode');
+            qrContainer.innerHTML = '';
+
+            QRCode.toCanvas(qrContainer, url, {
+                width: 300,
+                margin: 2,
+                color: {
+                    dark: '#2d8659',
+                    light: '#ffffff'
+                },
+                errorCorrectionLevel: 'H'
+            }, function (error) {
+                if (error) {
+                    console.error(error);
+                    alert('حدث خطأ أثناء إنشاء QR Code | Error generating QR Code');
+                }
+            });
+        }
+
+        function downloadQR() {
+            if (!currentQRData) {
+                alert('الرجاء إنشاء QR Code أولاً | Please generate QR Code first');
+                return;
+            }
+
+            const canvas = document.querySelector('#qrcode canvas');
+            if (!canvas) {
+                alert('الرجاء إنشاء QR Code أولاً | Please generate QR Code first');
+                return;
+            }
+
+            const link = document.createElement('a');
+            link.download = 'doctor-restaurant-qrcode.png';
+            link.href = canvas.toDataURL('image/png');
+            link.click();
+        }
+
+        // Auto-generate QR code on page load
+        window.onload = function() {
+            generateQR();
+        };
+    </script>
+</body>
+</html>
+
